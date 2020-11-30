@@ -1,0 +1,6 @@
+<h1>UPDATE PRODUCT</h1>
+ID:<input type="text" [(ngModel)]="id"><br/>
+NAME:<input type="text" [(ngModel)]="name"><br/>
+EMAIL:<input type="text" [(ngModel)]="email"><br/>
+DESIGNATION:<input type="text" [(ngModel)]="designation"><br/>
+<input type="button" value="UPDATE" (click)="updateEmployee({'id':id,'name':name,'email':email,'designation':designation})"/>

@@ -1,0 +1,7 @@
+<h1>CREATE PRODUCT</h1>
+<table>
+<tr><td>NAME:</td><td><input type="text" [(ngModel)]="name" placeholder="enter your name"></td></tr>
+<tr><td>EMAIL:</td><td><input type="text" [(ngModel)]="email" placeholder="enter your email"></td></tr>
+<tr><td>DESIGNATION:</td><td><input type="text" [(ngModel)]="designation" placeholder="enter your designation"></td></tr>
+<tr><td colspan="2" align="center"><input type="button" value="CREATE" (click)="createEmployee({'name':name,'email':email,'designation':designation})" onclick="alert('Employee Created')"/></td></tr>
+</table>

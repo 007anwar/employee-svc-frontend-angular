@@ -1,0 +1,42 @@
+
+<b align="center">EMPLOYEE MANAGEMENT</b><br/><br/>
+<div class="container">
+    <div class="panel-body">
+      <div class="table-responsive fixed-table-body">
+        <table class="table table-bordered table-hover table-striped">
+        <thead style="background-color: grey;">
+    <TR>
+        <TH COLSPAN="6">
+           <H3>EMPLOYEE INFORMATION</H3>
+        </TH>
+     </TR>  
+    <tr>
+            <th class="col-md-1" >ID</th>
+            <th class="col-md-1">Name</th>
+            <th class="col-md-1">Email</th>
+            <th class="col-md-1">Designation</th>
+            <th class="col-md-1">Delete</th>
+            <th class="col-md-1">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of Employees">
+        <td><input type="number" value={{e.id}}></td>
+        <td><input type="text" value={{e.name}} ></td>
+        <td><input type="text" value={{e.email}} ></td>
+        <td><input type="text" value={{e.designation}}></td>
+        <td><input type="button" value="delete" (click)="deleteEmployee(e.id)"></td> 
+        <td><input type="button" value="update" (click)="updateEmployee({'id':e.id,'name':e.name,'email':e.email,'designation':e.designation})"></td>  
+    </tr>
+        
+    </tbody>
+    <tbody>
+        <tr align="CENTER"><td colspan="4 ">
+         <input type="button" value="Previous" (click)="previousPage()">
+         <input type="button" value="Next" (click)="nextPage()">
+        </td></tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
